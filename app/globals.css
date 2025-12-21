@@ -3,13 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  /* scroll-padding-top: 90px; */
+  scroll-padding-top: 90px;
 }
 
 /* Make anchor links stop below the sticky header */
-/* section[id] {
+section[id] {
   scroll-margin-top: 90px;
-} */
+}
 
 @theme inline {
   --color-background: var(--background);

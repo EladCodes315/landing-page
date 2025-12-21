@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Sparkles, Zap, Shield } from "lucide-react";
+import { CheckCircle2, Sparkles, Zap, Shield } from "lucide-react";
 import { CALENDLY_URL } from "@/app/lib/links";
 
 type Lang = "en" | "he";
@@ -195,17 +195,13 @@ export function LandingShell({ copy }: { copy: Copy }) {
               </div>
             </div>
 
-            <nav
-              className={`flex items-center gap-3 text-sm ${
-                isHe ? "flex-row-reverse" : ""
-              }`}
-            >
-              <a
+            <nav className={`flex items-center gap-3 text-sm`}>
+              <Link
                 className="rounded-xl px-3 py-2 text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950"
                 href={copy.nav.switchTo.href}
               >
                 {copy.nav.switchTo.label}
-              </a>
+              </Link>
 
               <Link
                 href={CALENDLY_URL}
@@ -524,12 +520,12 @@ export function LandingShell({ copy }: { copy: Copy }) {
               >
                 {copy.finalCta.primary}
               </a>
-              <a
+              <Link
                 className="inline-flex items-center justify-center rounded-2xl border border-neutral-300 bg-white px-6 py-3 text-neutral-900 shadow-sm transition hover:bg-neutral-50"
                 href={copy.nav.switchTo.href}
               >
                 {copy.finalCta.switchLang}
-              </a>
+              </Link>
             </motion.div>
 
             <motion.p
