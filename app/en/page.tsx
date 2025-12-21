@@ -15,7 +15,7 @@ export default function Page() {
     lang: "en",
     nav: {
       switchTo: { label: "HE", href: "/he" },
-      cta: "Book a free intro call",
+      cta: "Schedule a free intro call",
     },
     hero: {
       eyebrow: "MVP Builder / Product Engineer",
