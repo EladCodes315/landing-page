@@ -8,9 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const primaryCtaHref =
-    "mailto:elad@eaproductstudios.com?subject=Intro%20Call%20-%20EA%20Product%20Studios";
-
   const copy = {
     lang: "en",
     nav: {
@@ -114,5 +111,5 @@ export default function Page() {
     footer: "",
   } as const;
 
-  return <LandingShell copy={copy} primaryCtaHref={primaryCtaHref} />;
+  return <LandingShell copy={copy} />;
 }

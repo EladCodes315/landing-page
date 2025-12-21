@@ -8,9 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const primaryCtaHref =
-    "mailto:elad@eaproductstudios.com?subject=%D7%A9%D7%99%D7%97%D7%AA%20%D7%94%D7%99%D7%9B%D7%A8%D7%95%D7%AA%20-%20EA%20Product%20Studios";
-
   const copy = {
     lang: "he",
     nav: { switchTo: { label: "EN", href: "/en" }, cta: "קביעת שיחת היכרות" },
@@ -111,5 +108,5 @@ export default function Page() {
     footer: "",
   } as const;
 
-  return <LandingShell copy={copy} primaryCtaHref={primaryCtaHref} />;
+  return <LandingShell copy={copy} />;
 }
