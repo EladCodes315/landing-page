@@ -56,19 +56,21 @@ export default function Page() {
         title: "Fast to market",
         text: "Build an MVP in weeks, not months — with clear scope and milestones.",
         icon: "zap",
+        badge: "Speed & clarity",
       },
       {
         title: "Product mindset",
         text: `I focus on shipping the right thing — not just "more code".`,
         icon: "sparkles",
+        badge: "Quality over quantity",
       },
       {
         title: "Production-ready",
         text: "Clean architecture and a strong foundation for growth.",
         icon: "shield",
+        badge: "Built to scale",
       },
     ],
-    trustBadge: "Product-grade delivery",
     problem: {
       title: "Problem → Solution",
       p1: "You have an idea — but getting to a real product feels hard.",
@@ -143,8 +145,7 @@ export default function Page() {
       title: "Ready to build your MVP?",
       subtitle: "Let's talk and see if we're a good fit.",
       primary: "Schedule a free intro call",
-      switchLang: "עברית",
-      closing: "Free 30-minute intro call. I usually reply within 24 hours.",
+      closing: "Free 30-minute intro call.",
     },
   } as const;
 

@@ -1,4 +1,10 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   alternates: {
@@ -17,7 +23,7 @@ export const metadata: Metadata = {
 export default function HeLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="he" dir="rtl">
-      <body>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

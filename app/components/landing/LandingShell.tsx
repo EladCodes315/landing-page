@@ -27,8 +27,8 @@ type Copy = {
     title: string;
     text: string;
     icon: "zap" | "sparkles" | "shield";
+    badge: string;
   }>;
-  trustBadge: string;
   problem: {
     title: string;
     p1: string;
@@ -66,7 +66,6 @@ type Copy = {
     title: string;
     subtitle: string;
     primary: string;
-    switchLang: string;
     closing: string;
   };
 };
@@ -179,7 +178,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
       </div>
 
       {/* Sticky Header */}
-      <header className="sticky top-0 z-40 border-b border-neutral-200/60 bg-white/70 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-neutral-200/60 bg-white/70 backdrop-blur shadow-sm">
         <Container className="py-4">
           <div className="flex items-center justify-between gap-4">
             <div
@@ -254,9 +253,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
             <motion.div
               custom={3}
               variants={fadeUp}
-              className={`mt-8 flex flex-col gap-3 sm:flex-row sm:items-center ${
-                isHe ? "sm:flex-row-reverse" : ""
-              }`}
+              className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
             >
               <a
                 className="inline-flex items-center justify-center rounded-2xl bg-neutral-900 px-6 py-3 text-white shadow-sm transition hover:bg-neutral-800 active:scale-[0.99]"
@@ -296,7 +293,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
                         <Icon name={t.icon} />
                       </span>
                       <span className="text-sm text-neutral-700">
-                        {copy.trustBadge}
+                        {t.badge}
                       </span>
                     </div>
                   }
@@ -502,6 +499,8 @@ export function LandingShell({ copy }: { copy: Copy }) {
               </h2>
               <p className="mt-2 max-w-2xl text-base leading-7 text-neutral-600">
                 {copy.finalCta.subtitle}
+                <br />
+                {copy.finalCta.closing}
               </p>
             </motion.div>
 
@@ -520,21 +519,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
               >
                 {copy.finalCta.primary}
               </a>
-              <Link
-                className="inline-flex items-center justify-center rounded-2xl border border-neutral-300 bg-white px-6 py-3 text-neutral-900 shadow-sm transition hover:bg-neutral-50"
-                href={copy.nav.switchTo.href}
-              >
-                {copy.finalCta.switchLang}
-              </Link>
             </motion.div>
-
-            <motion.p
-              custom={2}
-              variants={fadeUp}
-              className="mt-6 text-sm text-neutral-600"
-            >
-              {copy.finalCta.closing}
-            </motion.p>
           </motion.div>
 
           <div className="mt-10 text-center text-xs text-neutral-500">
