@@ -115,12 +115,11 @@ export default function Page() {
     },
     finalCta: {
       title: "Ready to build your MVP?",
-      subtitle: "Let’s talk and see if we’re a good fit.",
+      subtitle: "Let's talk and see if we're a good fit.",
       primary: "Schedule a free intro call",
       switchLang: "עברית",
       closing: "Free 15-minute intro call. I usually reply within 24 hours.",
     },
-    footer: "",
   } as const;
 
   return <LandingShell copy={copy} />;

@@ -117,7 +117,6 @@ export default function Page() {
       closing:
         "שיחת היכרות קצרה (15 דקות), ללא התחייבות. בדרך כלל חוזר תוך 24 שעות.",
     },
-    footer: "",
   } as const;
 
   return <LandingShell copy={copy} />;

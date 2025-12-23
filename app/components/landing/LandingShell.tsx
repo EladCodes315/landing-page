@@ -69,7 +69,6 @@ type Copy = {
     switchLang: string;
     closing: string;
   };
-  footer: string;
 };
 
 const fadeUp = {
@@ -202,7 +201,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
               </div>
             </div>
 
-            <nav className={`flex items-center gap-3 text-sm`}>
+            <nav className="flex items-center gap-3 text-sm">
               <Link
                 className="rounded-xl px-3 py-2 text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950"
                 href={copy.nav.switchTo.href}
@@ -539,7 +538,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
           </motion.div>
 
           <div className="mt-10 text-center text-xs text-neutral-500">
-            {copy.footer} © {new Date().getFullYear()} EA Product Studios
+            © {new Date().getFullYear()} EA Product Studios
           </div>
         </Container>
       </section>
