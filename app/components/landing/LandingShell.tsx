@@ -181,11 +181,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
       <header className="sticky top-0 z-40 border-b border-neutral-200/60 bg-white/70 backdrop-blur shadow-sm">
         <Container className="py-4">
           <div className="flex items-center justify-between gap-4">
-            <div
-              className={`flex items-center gap-3 ${
-                isHe ? "flex-row-reverse" : ""
-              }`}
-            >
+            <div className="flex items-center gap-3">
               <div className="grid h-9 w-9 place-items-center rounded-xl border border-neutral-200 bg-white shadow-sm">
                 <span className="text-sm font-bold tracking-tight text-neutral-900">
                   EA
@@ -284,11 +280,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
                   title={t.title}
                   text={t.text}
                   extra={
-                    <div
-                      className={`flex items-center gap-2 ${
-                        isHe ? "flex-row-reverse" : ""
-                      }`}
-                    >
+                    <div className="flex items-center gap-2">
                       <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
                         <Icon name={t.icon} />
                       </span>
@@ -470,9 +462,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
                 {copy.proof.items.map((item) => (
                   <div
                     key={item}
-                    className={`flex items-center gap-2 text-sm text-neutral-700 ${
-                      isHe ? "flex-row-reverse" : ""
-                    }`}
+                    className="flex items-center gap-2 text-sm text-neutral-700"
                   >
                     <CheckCircle2 className="h-4 w-4 text-teal-600" />
                     <span>{item}</span>
@@ -507,9 +497,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
             <motion.div
               custom={1}
               variants={fadeUp}
-              className={`mt-6 flex flex-col gap-3 sm:flex-row ${
-                isHe ? "sm:flex-row-reverse" : ""
-              }`}
+              className="mt-6 flex flex-col gap-3 sm:flex-row"
             >
               <a
                 className="inline-flex items-center justify-center rounded-2xl bg-neutral-900 px-6 py-3 text-white shadow-sm transition hover:bg-neutral-800"
