@@ -174,7 +174,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
       <div className="fixed inset-0 -z-10 bg-neutral-50">
         <div className="absolute inset-0 bg-grid opacity-[0.35]" />
         <div className="absolute -top-24 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-teal-300/40 via-sky-300/30 to-indigo-300/35 blur-3xl" />
-        <div className="absolute -bottom-24 left-1/3 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-300/25 via-sky-300/25 to-teal-300/25 blur-3xl" />
+        <div className="absolute -bottom-48 left-1/3 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-300/25 via-sky-300/25 to-teal-300/25 blur-3xl sm:-bottom-24" />
       </div>
 
       {/* Sticky Header */}
@@ -218,7 +218,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
       </header>
 
       {/* Hero */}
-      <section className="pb-10 pt-12 sm:pt-16">
+      <section className="pb-12 pt-12 sm:pb-16 sm:pt-20">
         <Container>
           <motion.div initial="hidden" animate="show" className="max-w-3xl">
             <motion.div custom={0} variants={fadeUp} className="mb-4">
@@ -272,7 +272,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
-            className="mt-10 grid gap-4 sm:grid-cols-3"
+            className="mt-12 grid gap-6 sm:mt-10 sm:grid-cols-3 sm:gap-4"
           >
             {copy.trust.map((t, idx) => (
               <motion.div key={t.title} custom={idx} variants={fadeUp}>
@@ -297,7 +297,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
       </section>
 
       {/* Problem */}
-      <section className="py-14">
+      <section className="py-16 sm:py-14">
         <Container>
           <motion.div
             initial="hidden"
@@ -346,7 +346,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
       </section>
 
       {/* Services */}
-      <section id="services" className="py-14">
+      <section id="services" className="py-16 sm:py-14">
         <Container>
           <motion.div
             initial="hidden"
