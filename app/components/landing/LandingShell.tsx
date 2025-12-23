@@ -174,7 +174,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
       <div className="fixed inset-0 -z-10 bg-neutral-50">
         <div className="absolute inset-0 bg-grid opacity-[0.35]" />
         <div className="absolute -top-24 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-teal-300/40 via-sky-300/30 to-indigo-300/35 blur-3xl" />
-        <div className="absolute -bottom-48 left-1/3 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-300/25 via-sky-300/25 to-teal-300/25 blur-3xl sm:-bottom-24" />
+        <div className="absolute -bottom-24 left-1/3 hidden h-72 w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-300/25 via-sky-300/25 to-teal-300/25 blur-3xl sm:block" />
       </div>
 
       {/* Sticky Header */}
@@ -208,7 +208,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-2xl bg-neutral-900 px-6 py-3 text-white shadow-sm transition hover:bg-neutral-800 active:scale-[0.99]"
+                className="inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2 text-sm text-white shadow-sm transition hover:bg-neutral-800 active:scale-[0.99] sm:rounded-2xl sm:px-6 sm:py-3 sm:text-base"
               >
                 {copy.nav.cta}
               </Link>
