@@ -32,10 +32,16 @@ html {
 
 /* Slightly nicer text rendering */
 body {
-  background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+  background: #fafafa;
   color: var(--foreground);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 640px) {
+  body {
+    background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
