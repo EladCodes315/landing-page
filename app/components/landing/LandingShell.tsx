@@ -178,7 +178,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
       </div>
 
       {/* Sticky Header */}
-      <header className="sticky top-0 z-40 border-b border-neutral-200/60 bg-white/70 backdrop-blur shadow-sm">
+      <header className="sticky top-0 z-40 border-b border-neutral-200/20 bg-white/70 backdrop-blur shadow-sm sm:border-neutral-200/60">
         <Container className="py-4">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
