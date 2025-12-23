@@ -1,11 +1,37 @@
 import type { Metadata } from "next";
 import { LandingShell } from "@/app/components/landing/LandingShell";
+import { generatePersonSchema, generateServiceSchema } from "@/app/lib/schema";
 
-export const metadata: Metadata = {
-  title: "EA Product Studios | MVP Builder / Product Engineer",
-  description:
-    "בניית MVPים שהופכים רעיונות למוצרים אמיתיים. ליווי סטארטאפים משלב הרעיון ועד מוצר עובד בפרודקשן — בצורה מהירה, ממוקדת וסקיילבילית.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "EA Product Studios | בניית אפליקציות ומערכות לעסקים",
+    description:
+      "בניית אפליקציות ומערכות דיגיטליות לעסקים. ליווי מלא מהרעיון ועד פתרון עובד — קביעת תורים, ניהול לקוחות, תשלומים ועוד.",
+    openGraph: {
+      title: "EA Product Studios | בניית אפליקציות לעסקים",
+      description:
+        "בניית אפליקציות ומערכות דיגיטליות לעסקים. ליווי מלא מהרעיון ועד פתרון עובד.",
+      url: "https://eaproductstudios.com/he",
+      siteName: "EA Product Studios",
+      images: [
+        {
+          url: "/og.png",
+          width: 1200,
+          height: 630,
+          alt: "EA Product Studios – בניית אפליקציות ומערכות לעסקים",
+        },
+      ],
+      locale: "he_IL",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "EA Product Studios | בניית אפליקציות",
+      description: "בניית אפליקציות ומערכות דיגיטליות לעסקים",
+      images: ["/og.png"],
+    },
+  };
+}
 
 export default function Page() {
   const copy = {
@@ -41,7 +67,7 @@ export default function Page() {
     ],
     trustBadge: "פתרון ברמה מקצועית",
     problem: {
-      title: "בעיה → פתרון",
+      title: "בעיה ← פתרון",
       p1: "יש לך רעיון לאפליקציה או מערכת — אבל לא ברור מאיפה מתחילים.",
       bullets: [
         "קשה להבין מה באמת צריך לבנות בהתחלה",
@@ -115,9 +141,24 @@ export default function Page() {
       primary: "קביעת שיחת היכרות חינמית",
       switchLang: "English",
       closing:
-        "שיחת היכרות קצרה (15 דקות), ללא התחייבות. בדרך כלל חוזר תוך 24 שעות.",
+        "שיחת היכרות קצרה (30 דקות), ללא התחייבות. בדרך כלל חוזר תוך 24 שעות.",
     },
   } as const;
 
-  return <LandingShell copy={copy} />;
+  const personSchema = generatePersonSchema("he");
+  const serviceSchema = generateServiceSchema("he");
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <LandingShell copy={copy} />
+    </>
+  );
 }

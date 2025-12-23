@@ -254,7 +254,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
             <motion.div
               custom={3}
               variants={fadeUp}
-              className={`mt-8 flex flex-col gap-3 sm:flex-row ${
+              className={`mt-8 flex flex-col gap-3 sm:flex-row sm:items-center ${
                 isHe ? "sm:flex-row-reverse" : ""
               }`}
             >
@@ -267,7 +267,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
                 {copy.hero.primaryCta}
               </a>
               <a
-                className="inline-flex items-center justify-center rounded-2xl border border-neutral-300 bg-white/80 px-6 py-3 text-neutral-900 shadow-sm transition hover:bg-white active:scale-[0.99]"
+                className="inline-flex items-center justify-center text-neutral-700 underline-offset-4 hover:underline"
                 href="#services"
               >
                 {copy.hero.secondaryCta}
