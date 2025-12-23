@@ -13,6 +13,9 @@ type Copy = {
     switchTo: { label: string; href: string };
     cta: string;
   };
+  header: {
+    tagline: string;
+  };
   hero: {
     eyebrow: string;
     title: string;
@@ -25,12 +28,15 @@ type Copy = {
     text: string;
     icon: "zap" | "sparkles" | "shield";
   }>;
+  trustBadge: string;
   problem: {
     title: string;
     p1: string;
     bullets: readonly string[];
     p2Title: string;
     p2: React.ReactNode;
+    outcomeLabel: string;
+    outcomeText: string;
   };
   services: {
     title: string;
@@ -54,6 +60,7 @@ type Copy = {
   proof: {
     title: string;
     text: string;
+    items: readonly string[];
   };
   finalCta: {
     title: string;
@@ -190,7 +197,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
               <div className="leading-tight">
                 <div className="text-sm font-semibold">EA Product Studios</div>
                 <div className="text-xs text-neutral-600">
-                  Building MVPs that turn ideas into real products
+                  {copy.header.tagline}
                 </div>
               </div>
             </div>
@@ -290,7 +297,7 @@ export function LandingShell({ copy }: { copy: Copy }) {
                         <Icon name={t.icon} />
                       </span>
                       <span className="text-sm text-neutral-700">
-                        Product-grade delivery
+                        {copy.trustBadge}
                       </span>
                     </div>
                   }
@@ -339,8 +346,10 @@ export function LandingShell({ copy }: { copy: Copy }) {
                 </div>
 
                 <div className="mt-6 rounded-2xl bg-gradient-to-r from-teal-50 via-sky-50 to-indigo-50 p-4 text-sm text-neutral-800">
-                  <span className="font-semibold">Outcome:</span> MVP you can
-                  demo, sell, and grow — with a clean foundation.
+                  <span className="font-semibold">
+                    {copy.problem.outcomeLabel}
+                  </span>{" "}
+                  {copy.problem.outcomeText}
                 </div>
               </div>
             </motion.div>
@@ -462,23 +471,15 @@ export function LandingShell({ copy }: { copy: Copy }) {
               </p>
 
               <div className="mt-6 grid gap-3">
-                {[
-                  isHe
-                    ? "Dashboards & admin tools"
-                    : "Dashboards & admin tools",
-                  isHe ? "Production APIs & auth" : "Production APIs & auth",
-                  isHe
-                    ? "Clean architecture for growth"
-                    : "Clean architecture for growth",
-                ].map((x) => (
+                {copy.proof.items.map((item) => (
                   <div
-                    key={x}
+                    key={item}
                     className={`flex items-center gap-2 text-sm text-neutral-700 ${
                       isHe ? "flex-row-reverse" : ""
                     }`}
                   >
                     <CheckCircle2 className="h-4 w-4 text-teal-600" />
-                    <span>{x}</span>
+                    <span>{item}</span>
                   </div>
                 ))}
               </div>

@@ -14,6 +14,9 @@ export default function Page() {
       switchTo: { label: "HE", href: "/he" },
       cta: "Schedule a free intro call",
     },
+    header: {
+      tagline: "Building MVPs that turn ideas into real products",
+    },
     hero: {
       eyebrow: "MVP Builder / Product Engineer",
       title: "Building MVPs that turn ideas into real products",
@@ -30,7 +33,7 @@ export default function Page() {
       },
       {
         title: "Product mindset",
-        text: "I focus on shipping the right thing — not just “more code”.",
+        text: `I focus on shipping the right thing — not just "more code".`,
         icon: "sparkles",
       },
       {
@@ -39,21 +42,25 @@ export default function Page() {
         icon: "shield",
       },
     ],
+    trustBadge: "Product-grade delivery",
     problem: {
       title: "Problem → Solution",
       p1: "You have an idea — but getting to a real product feels hard.",
       bullets: [
         "You know what you want to build, but not how",
         "Development feels slow, messy, or overwhelming",
-        "You’re unsure what should actually be built first",
+        "You're unsure what should actually be built first",
       ],
-      p2Title: "That’s where I come in",
+      p2Title: "That's where I come in",
       p2: (
         <>
           I work as a <strong>Product Engineer</strong>, not just a developer —
           helping you build the <strong>right MVP</strong>, not just write code.
         </>
       ),
+      outcomeLabel: "Outcome:",
+      outcomeText:
+        "MVP you can demo, sell, and grow — with a clean foundation.",
     },
     services: {
       title: "Services",
@@ -99,7 +106,12 @@ export default function Page() {
     },
     proof: {
       title: "Experience / Proof",
-      text: "I’ve worked on production backend systems, internal dashboards, scalable architectures, and end-to-end MVPs used by real users.",
+      text: "I've worked on production backend systems, internal dashboards, scalable architectures, and end-to-end MVPs used by real users.",
+      items: [
+        "Dashboards & admin tools",
+        "Production APIs & auth",
+        "Clean architecture for growth",
+      ],
     },
     finalCta: {
       title: "Ready to build your MVP?",
