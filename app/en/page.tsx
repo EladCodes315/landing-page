@@ -38,7 +38,7 @@ export default function Page() {
     lang: "en",
     nav: {
       switchTo: { label: "HE", href: "/he" },
-      cta: "Schedule a free intro call",
+      cta: "Schedule intro call",
     },
     header: {
       tagline: "Building MVPs that turn ideas into real products",

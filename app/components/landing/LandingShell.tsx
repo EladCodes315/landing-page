@@ -171,14 +171,14 @@ export function LandingShell({ copy }: { copy: Copy }) {
       }`}
     >
       {/* Background */}
-      <div className="fixed inset-0 -z-10 overflow-hidden bg-neutral-50">
-        <div className="absolute inset-0 bg-grid opacity-[0.15] sm:opacity-[0.35]" />
+      <div className="fixed inset-0 -z-10 bg-neutral-50">
+        <div className="absolute inset-0 bg-grid opacity-[0.35]" />
         <div className="absolute -top-24 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-teal-300/40 via-sky-300/30 to-indigo-300/35 blur-3xl" />
-        <div className="absolute -bottom-24 left-1/3 hidden h-72 w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-300/25 via-sky-300/25 to-teal-300/25 blur-3xl sm:block" />
+        <div className="absolute -bottom-24 left-1/3 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-300/25 via-sky-300/25 to-teal-300/25 blur-3xl" />
       </div>
 
       {/* Sticky Header */}
-      <header className="sticky top-0 z-40 border-b border-neutral-200/20 bg-white/70 backdrop-blur shadow-sm sm:border-neutral-200/60">
+      <header className="sticky top-0 z-40 border-b border-neutral-200/60 bg-white/70 backdrop-blur shadow-sm">
         <Container className="py-4">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">

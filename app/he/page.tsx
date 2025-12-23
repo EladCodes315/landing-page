@@ -36,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
   const copy = {
     lang: "he",
-    nav: { switchTo: { label: "EN", href: "/en" }, cta: "קביעת שיחת היכרות" },
+    nav: { switchTo: { label: "EN", href: "/en" }, cta: "קביעת שיחה" },
     header: {
       tagline: "בונה אפליקציות ומערכות דיגיטליות לעסקים",
     },
